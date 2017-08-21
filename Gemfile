@@ -42,7 +42,13 @@ end
 
 group :development do
   # Use Capistrano for deployment
-  gem 'capistrano-rails'
+  gem 'capistrano', '~> 3.6'
+  gem 'capistrano-rails', '~> 1.3'
+  gem 'capistrano3-puma'
+  gem 'capistrano-secrets-yml'
+  gem 'rbnacl', '>= 3.2', '< 5.0'
+  gem 'rbnacl-libsodium'
+  gem 'bcrypt_pbkdf', '>= 1.0', '< 2.0'
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
