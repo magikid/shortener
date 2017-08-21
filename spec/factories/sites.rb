@@ -1,8 +1,8 @@
 FactoryGirl.define do
   factory :site do
-    short_code "MyString"
-    url "MyString"
+    short_code "abc123"
+    url "https://google.com"
     hits 1
-    user nil
+    user
   end
 end

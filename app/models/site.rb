@@ -1,6 +1,7 @@
 class Site < ApplicationRecord
   belongs_to :user
   after_initialize :generate_short_code
+  validates_uniqueness_of :short_code
 
   private
 
