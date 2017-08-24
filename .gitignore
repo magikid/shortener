@@ -59,3 +59,7 @@ bower.json
 .byebug_history
 
 .env
+
+# Ignore encrypted secrets key file.
+config/secrets.yml.key
+config/secrets.yml
