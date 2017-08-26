@@ -61,12 +61,13 @@ server "ssh.phx.nearlyfreespeech.net", user: "magikid_cwjforwarder", roles: %w{a
 #     # password: "please use keys"
 #   }
 #
+
+# For rails
 set :default_env, {
   'RAILS_ENV' => 'production'
 }
-
 set :assets_roles, [:web, :app]            # Defaults to [:web]
 
-after 'deploy:publishing', 'deploy:restart'
-after 'deploy:published', 'deploy:assets:precompile'
+
+after 'deploy:published', 'shortener:restart_production'
 after 'deploy:published', 'bundler:clean'
