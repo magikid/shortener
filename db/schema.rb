@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170820230007) do
+ActiveRecord::Schema.define(version: 20170820205006) do
 
   create_table "sites", force: :cascade do |t|
     t.string "short_code", null: false
@@ -21,7 +21,6 @@ ActiveRecord::Schema.define(version: 20170820230007) do
     t.datetime "updated_at", null: false
     t.index ["short_code"], name: "index_sites_on_short_code"
     t.index ["user_id"], name: "index_sites_on_user_id"
-    t.index [nil], name: "index_sites_on_short_cide", unique: true
   end
 
   create_table "users", force: :cascade do |t|

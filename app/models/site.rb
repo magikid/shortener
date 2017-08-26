@@ -1,6 +1,12 @@
 class Site < ApplicationRecord
   belongs_to :user
   after_initialize :generate_short_code
+  validates_uniqueness_of :short_code
+
+  # This weird regex should check that the given string *is* a URL.  Found it on
+  # [StackOverflow](https://stackoverflow.com/a/1805788/1695439)
+  validates :url, format: { with: /\A#{URI::regexp}\z/, message: "only allows
+                            properly formatted URLs" }
 
   private
 
