@@ -13,9 +13,9 @@
       <ul class="nav navbar-nav navbar-right">
         <% if current_user %>
           <p class="navbar-text">Signed in as <%= current_user.name %></p>
-          <li><%= link_to "Logoff", destroy_session_path %></li>
+          <li><%= link_to "Logoff", destroy_session_path, id: "sign-out-link" %></li>
         <% else %>
-          <li><%= link_to "Sign in", new_session_path %></li>
+          <li><%= link_to "Sign in", new_session_path, id: "sign-in-link" %></li>
         <% end %>
       </ul>
     </div>
